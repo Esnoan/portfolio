@@ -1,4 +1,5 @@
 ---
+import { Links } from '../../constants/links'
 import EmailIcon from '../icons/EmailIcon.astro'
 import GithubIcon from '../icons/GithubIcon.astro'
 import LinkedinIcon from '../icons/LinkedinIcon.astro'
@@ -25,13 +26,13 @@ import SocialButton from '../ui/SocialButton.astro'
         Full-stack developer
       </span>
       <div class='flex flex-wrap items-center gap-2 mt-1 lg:gap-3'>
-        <SocialButton title='Github'>
+        <SocialButton title='Github' href={Links.github}>
           <GithubIcon slot='icon' />
         </SocialButton>
-        <SocialButton title='LinkedIn'>
+        <SocialButton title='LinkedIn' href={Links.linkedin}>
           <LinkedinIcon slot='icon' />
         </SocialButton>
-        <SocialButton title='Email'>
+        <SocialButton title='Email' href={Links.email}>
           <EmailIcon slot='icon' />
         </SocialButton>
       </div>

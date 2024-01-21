@@ -3,6 +3,8 @@ import GithubIcon from '../icons/GithubIcon.astro'
 import HeartIcon from '../icons/HeartIcon.astro'
 import LinkedinIcon from '../icons/LinkedinIcon.astro'
 
+import { Links } from '../../constants/links.ts'
+
 const currentYear = new Date().getFullYear()
 ---
 
@@ -20,13 +22,13 @@ const currentYear = new Date().getFullYear()
       <div class='flex items-center gap-2 text-xl'>
         <a
           class='flex items-center font-medium'
-          href='mailto:erickvpomie@gmail.com'
+          href={Links.email}
           title='Email me'>
           <GithubIcon />
         </a>
         <a
           class='flex items-center font-medium'
-          href='https://www.linkedin.com/in/erickvpomie/'
+          href={Links.linkedin}
           target='_blank'
           rel='noreferrer'
           title='LinkedIn'>
