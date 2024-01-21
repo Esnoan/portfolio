@@ -1,0 +1,13 @@
+---
+const { title, href } = Astro.props
+---
+
+<a
+  class='flex items-center font-medium bg-white px-3 py-2 rounded-lg text-gray-950 gap-2 active:scale-[1.1] transition-transform duration-300'
+  href={href}
+  target='_blank'
+  rel='noreferrer'
+  title={title}>
+  <slot name='icon' />
+  <span class='hidden lg:flex'>{title}</span>
+</a>

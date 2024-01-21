@@ -1,0 +1,64 @@
+---
+import EmailIcon from '../icons/EmailIcon.astro'
+import GithubIcon from '../icons/GithubIcon.astro'
+import LinkedinIcon from '../icons/LinkedinIcon.astro'
+import TrendingUpIcon from '../icons/TrendingUpIcon.astro'
+import SocialButton from '../ui/SocialButton.astro'
+---
+
+<section class='w-full grid auto-rows-[192px] grid-cols-6 gap-4 mt-[5.5rem]'>
+  <div
+    class='row-span-2 col-span-6 rounded-3xl bg-white relative flex flex-col overflow-hidden gap-10 justify-end p-6 xl:col-span-4 lg:items-end sm:flex-row lg:p-10 group'>
+    <div
+      class='absolute bg-gradient-to-t from-gray-950/30 to-transparent top-0 left-0 bottom-0 right-0 z-[2]'>
+    </div>
+    <img
+      class='absolute w-full h-full left-0 top-0 scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110'
+      src='https://images.unsplash.com/photo-1506187334569-7596f62cf93f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3149&q=80'
+      alt='personal'
+      title='Personal'
+    />
+    <div
+      class='w-full flex flex-col z-[2] absolute left-0 bottom-0 leading-4 p-5 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110"'>
+      <span class='text-3xl font-bold leading-7 text-white'>Andres Urbano</span>
+      <span class='text-lg font-medium leading-9 text-white'>
+        Full-stack developer
+      </span>
+      <div class='flex flex-wrap items-center gap-2 mt-1 lg:gap-3'>
+        <SocialButton title='Github'>
+          <GithubIcon slot='icon' />
+        </SocialButton>
+        <SocialButton title='LinkedIn'>
+          <LinkedinIcon slot='icon' />
+        </SocialButton>
+        <SocialButton title='Email'>
+          <EmailIcon slot='icon' />
+        </SocialButton>
+      </div>
+    </div>
+  </div>
+  <div
+    class='row-span-1 col-span-6 rounded-3xl bg-white relative flex flex-col overflow-hidden border-2 border-transparent gap-2 p-7 dark:bg-dark-foreground xl:col-span-2 lg:p-10'>
+    <h2 class='text-2xl font-bold z-[1]'>About me</h2>
+    <p class='text-base w-full z-[1] opacity-70'>
+      Developer with experience in design, development and maintenance of
+      full-stack applications.
+    </p>
+  </div>
+  <div
+    class='row-span-1 col-span-3 rounded-3xl bg-white relative flex flex-col overflow-hidden border-2 border-transparent gap-2 items-center justify-center dark:bg-dark-foreground xl:col-span-1'>
+    <p class='text-7xl z-[1] font-bold flex items-center gap-1'>
+      <span>+</span><span>5</span>
+    </p>
+    <p class='text-sm font-semibold max-w-fit opacity-70 z-[1]'>
+      Years of experience
+    </p>
+    <div
+      class='w-full h-full absolute -right-12 -bottom-12 opacity-5 dark:opacity-[0.05] z-[0]'>
+      <TrendingUpIcon size={180} />
+    </div>
+  </div>
+  <div
+    class='row-span-1 col-span-3 rounded-3xl bg-white dark:bg-dark-foreground overflow-hidden border-2 border-transparent xl:col-span-1 flex items-center justify-center relative'>
+  </div>
+</section>

@@ -1,0 +1,73 @@
+---
+import ExternalLinkIcon from '../icons/ExternalLinkIcon.astro'
+
+interface Job {
+  title: string
+  company: string
+  date: string
+  url: string
+  image: string
+}
+
+const jobs: Job[] = [
+  {
+    title: 'Full-stack Developer',
+    company: 'Imprimu',
+    date: '04 / 2022 — 01 / 2024',
+    url: 'https://imprimu.com/es/',
+    image: '/images/printing.jpg'
+  },
+  {
+    title: 'Front-end Developer',
+    company: 'Swiset',
+    date: '05 / 2023 — 12 / 2023',
+    url: 'https://swiset.com/es/',
+    image: '/images/trading.jpg'
+  },
+  {
+    title: 'Front-end Developer',
+    company: 'Pragma',
+    date: '05 / 2021 — 12 / 2021',
+    url: 'https://www.pragma.co/es/',
+    image: '/images/development.jpg'
+  },
+  {
+    title: 'Full-stack Developer',
+    company: 'Monquick',
+    date: '12 / 2019 — 04 / 2021',
+    url: 'https://monquick.com',
+    image: '/images/development-2.jpg'
+  }
+]
+---
+
+<section class='w-full grid auto-rows-[260px] grid-cols-8 gap-4'>
+  {
+    jobs.map((job) => {
+      return (
+        <div class='row-span-1 col-span-8 lg:row-span-2 lg:col-span-2 bg-white dark:bg-gray-950 rounded-3xl overflow-hidden relative flex flex-col py-14 items-center justify-between'>
+          <div class='flex flex-col items-center'>
+            <p class='text-center text-white leading-5 mt-2 z-[1] font-medium'>
+              {job.title}
+              <br />
+              {job.date}
+            </p>
+          </div>
+          <a
+            class='py-2 px-4 bg-[#0568fe] text-white font-medium rounded-lg flex items-center gap-2 z-[1]'
+            href={job.url}
+            target='_blank'
+            title={`${job.company} webpage`}>
+            <span>Visit {job.company}</span>
+            <ExternalLinkIcon />
+          </a>
+          <img
+            class='w-full h-full object-cover absolute left-0 top-0 z-0 dark:opacity-80 transition-all duration-300 hover:scale-110 dark:hover:opacity-100'
+            src={job.image}
+            alt={`${job.title} at ${job.company}`}
+          />
+        </div>
+      )
+    })
+  }
+</section>

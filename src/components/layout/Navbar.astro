@@ -1,0 +1,27 @@
+---
+import DarkModeButton from '../DarkModeButton.astro'
+import Button from '../ui/Button.astro'
+---
+
+<header
+  class='w-full h-[5rem] dark:bg-dark-background bg-opacity-70 fixed top-0 left-0 z-10 backdrop-blur-lg subpixel-antialiased flex items-center'>
+  <nav
+    class='w-full h-full flex items-center justify-between max-w-5xl xl:max-w-7xl mx-auto'>
+    <a href='/' class='flex'>
+      <span class='self-center text-2xl font-semibold whitespace-nowrap'>
+        Esnoan
+      </span>
+    </a>
+    <div class='flex justify-between items-center w-auto'>
+      <ul
+        class='flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium'>
+        <li class='flex items-center justify-center'>
+          <DarkModeButton />
+        </li>
+        <li>
+          <Button title='Download CV' />
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
