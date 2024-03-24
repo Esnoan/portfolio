@@ -1,0 +1,90 @@
+---
+import CodeIcon from '../components/icons/CodeIcon.astro'
+import EmailIcon from '../components/icons/EmailIcon.astro'
+import ExternalLinkIcon from '../components/icons/ExternalLinkIcon.astro'
+import GithubIcon from '../components/icons/GithubIcon.astro'
+import HeartIcon from '../components/icons/HeartIcon.astro'
+import LinkedinIcon from '../components/icons/LinkedinIcon.astro'
+import TrendingUpIcon from '../components/icons/TrendingUpIcon.astro'
+import SectionTitle from '../components/layout/SectionTitle.astro'
+import Button from '../components/ui/Button.astro'
+import DownloadButton from '../components/ui/DownloadButton.astro'
+import SocialButton from '../components/ui/SocialButton.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title='Esnoan'>
+  <SectionTitle
+    title='UI Kit'
+    subtitle='These are the components used to build this site'
+  />
+  <SectionTitle title='Icons' />
+  <h1>Props</h1>
+  <div class='flex flex-row gap-10 my-4'>
+    <div>
+      <code>Size?: number</code>
+      <p><b>Default value:</b> 24</p>
+    </div>
+    <div>
+      <code>Stroke?: number</code>
+      <p><b>Default value:</b> 2</p>
+    </div>
+  </div>
+  <section class='flex flex-wrap gap-4'>
+    <div class='flex flex-col items-center'>
+      <code>&#60;CodeIcon /&#62;</code>
+      <CodeIcon size={32} />
+    </div>
+    <div class='flex flex-col items-center'>
+      <code>&#60;EmailIcon /&#62;</code>
+      <EmailIcon size={32} />
+    </div>
+    <div class='flex flex-col items-center'>
+      <code>&#60;ExternalLinkIcon /&#62;</code>
+      <ExternalLinkIcon size={32} />
+    </div>
+    <div class='flex flex-col items-center'>
+      <code>&#60;GithubIcon /&#62;</code>
+      <GithubIcon size={32} />
+    </div>
+    <div class='flex flex-col items-center'>
+      <code>&#60;HeartIcon /&#62;</code>
+      <HeartIcon size={32} />
+    </div>
+    <div class='flex flex-col items-center'>
+      <code>&#60;LinkedinIcon /&#62;</code>
+      <LinkedinIcon size={32} />
+    </div>
+    <div class='flex flex-col items-center'>
+      <code>&#60;TrendingUpIcon /&#62;</code>
+      <TrendingUpIcon size={32} />
+    </div>
+  </section>
+  <SectionTitle title='Buttons' />
+  <h1>Props</h1>
+  <div class='flex flex-row gap-10 my-4'>
+    <div>
+      <code>title: string</code>
+    </div>
+    <div>
+      <code>href?: number</code>
+      <p><b>Default value:</b> #</p>
+    </div>
+  </div>
+  <section class='flex flex-wrap gap-4'>
+    <div class='flex flex-col items-center'>
+      <code>&#60;Button /&#62;</code>
+      <Button title='Button Action' />
+    </div>
+    <div class='flex flex-col items-center'>
+      <code>&#60;DownloadButton /&#62;</code>
+      <DownloadButton title='Download CV' />
+    </div>
+    <div class='flex flex-col items-center'>
+      <code>&#60;SocialButton /&#62;</code>
+      <SocialButton title='Github' href='#'>
+        <GithubIcon slot='icon' />
+      </SocialButton>
+    </div>
+  </section>
+</Layout>

@@ -1,9 +1,9 @@
 ---
-const { title, href, download } = Astro.props
+const { title, href = '#' } = Astro.props
 ---
 
 <a
-  href='#'
-  class='block pl-3 pr-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-2xl text-base'>
+  href={href}
+  class='block pl-3 pr-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-2xl text-base max-w-fit'>
   {title}
 </a>

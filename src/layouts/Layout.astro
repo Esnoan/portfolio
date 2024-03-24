@@ -23,7 +23,9 @@ const { title } = Astro.props
   <body
     class='bg-background dark:bg-dark-background text-black dark:text-dark-text w-full max-w-5xl xl:max-w-7xl mx-auto p-5'>
     <Navbar />
-    <slot />
+    <main class='mt-[5.5rem]'>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
