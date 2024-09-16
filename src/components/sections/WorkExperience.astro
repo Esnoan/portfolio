@@ -20,7 +20,7 @@ const jobs: Job[] = [
   {
     title: 'Front-end Developer',
     company: 'Swiset',
-    date: '05 / 2023 — 12 / 2023',
+    date: '05 / 2023 — 04 / 2024',
     url: 'https://swiset.com/es/',
     image: '/images/trading.jpg'
   },
@@ -48,6 +48,8 @@ const jobs: Job[] = [
         <div class='row-span-1 col-span-8 lg:row-span-2 lg:col-span-2 bg-white dark:bg-gray-950 rounded-3xl overflow-hidden relative flex flex-col py-14 items-center justify-between'>
           <div class='flex flex-col items-center'>
             <p class='text-center text-white leading-5 mt-2 z-[1] font-medium'>
+              <span class='text-xl font-bold'>{job.company}</span>
+              <br />
               {job.title}
               <br />
               {job.date}
